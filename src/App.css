@@ -1,6 +1,8 @@
 :root {
     /* Colors */
     --primary-color: #1e293b;
+
+    --main-fonts: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .counter {

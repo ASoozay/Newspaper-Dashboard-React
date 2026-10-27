@@ -1,37 +1,47 @@
+import { useState } from "react";
 import AnnouncementCard from "./AnnouncementCard/AnnouncementCard.jsx";
-import SectionToolbar from "../../components/SectionToolbar/SectionToolBar.jsx";
+import AnnouncementModal from "./AnnouncementModal/AnnouncementModal.jsx";
+
 import "./Announcements.css";
 
 function Announcements() {
-    function handleAddAnnouncement() {
-        console.log("Open announcement form");
+  const [selectedAnnouncement, setSelectedAnnouncement] = useState(null);
+
+  const announcements = [
+    {
+      id: 1,
+      title: "Production Meeting",
+      message: "Our next production meeting is Monday at 4 PM.",
+      author: "Sports Editor",
+      date: "October 25"
+    },
+    {
+      id: 2,
+      title: "Article Deadlines",
+      message: "Please submit your article drafts by Friday.",
+      author: "Managing Editor",
+      date: "October 24"
     }
+  ];
+
   return (
     <section className="announcements">
-      <SectionToolbar
-        searchPlaceholder="Search announcements..."
-        buttonText="Add Announcement"
-        onAddClick={handleAddAnnouncement}
-      />
-
-      <div style={{ height: "16px" }}></div>
-
-      <div className = "announcement-card-container">  
-        <AnnouncementCard
-            title="Production Meeting"
-            message="Our next production meeting is Monday at 4 PM."
-            author="Editor"
-            date="October 25"
-        />
-
-        <AnnouncementCard
-            title="Article Deadlines"
-            message="Please submit your drafts by Friday."
-            author="Sports Editor"
-            date="October 24"
-        />       
-            
+      <div className="announcement-card-container">
+        {announcements.map((announcement) => (
+          <AnnouncementCard
+            key={announcement.id}
+            announcement={announcement}
+            onClick={() => setSelectedAnnouncement(announcement)}
+          />
+        ))}
       </div>
+
+      {selectedAnnouncement && (
+        <AnnouncementModal
+          announcement={selectedAnnouncement}
+          onClose={() => setSelectedAnnouncement(null)}
+        />
+      )}
     </section>
   );
 }

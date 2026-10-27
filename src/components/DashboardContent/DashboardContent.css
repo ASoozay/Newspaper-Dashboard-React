@@ -1,0 +1,10 @@
+.dashboard-content {
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+
+    /* Size */
+    flex: 1;
+    min-height: 0; 
+    width: 100%;
+}

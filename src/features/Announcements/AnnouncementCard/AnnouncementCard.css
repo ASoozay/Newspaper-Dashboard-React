@@ -1,0 +1,18 @@
+.announcement-card {
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8px;
+
+    /* Size */
+    width: 100%;
+    height: 100px;
+
+    /* Background */
+    background-color: white;
+
+    /* Border */
+    border-radius: 8px;
+    border: 2px lightgray solid;
+}

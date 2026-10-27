@@ -1,3 +1,8 @@
+:root {
+    /* Colors */
+    --primary-color: #1e293b;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -19,8 +24,12 @@
 
 .app {
   width: 100%;
-  min-height: 100vh;
-  height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
 }
 
 .hero {

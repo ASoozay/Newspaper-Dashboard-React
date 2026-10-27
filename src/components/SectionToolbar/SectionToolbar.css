@@ -1,0 +1,62 @@
+.section-toolbar {
+    /* Layout */
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    /* Size */
+    width: 100%;
+    height: 64px;
+
+    /* Background */
+    background-color: var(--primary-color);
+}
+
+.section-toolbar-search {
+    /* Layout */
+    padding-left: 8px;
+
+    /* Size */
+    height: 60%;
+    width: 25%;
+
+    /* Border */
+    border: none;
+    border-radius: 5px;
+
+    /* Text */
+    font-size: 16px;
+
+}
+
+.section-toolbar-add {
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Size */
+    height: 60%;
+    width: 10%;
+
+    /* Background */
+    background-color: white;
+
+    /* Border */
+    border: none;
+    border-radius: 5px;
+
+    /* Text */
+    font-size: 16px;
+}
+
+.section-toolbar-add:hover {
+    /* Background */
+    background-color: #cbd5e1;
+
+    /* Misc */
+    cursor: pointer;
+}

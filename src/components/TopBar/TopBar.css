@@ -11,7 +11,7 @@
     height: 64px;
 
     /* Background */
-    background-color: #1e293b;
+    background-color: var(--primary-color);
 
     /* Text */
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif

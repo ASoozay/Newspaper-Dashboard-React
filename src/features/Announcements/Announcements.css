@@ -1,0 +1,28 @@
+.announcements {
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    /* Size */
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+
+}
+
+.announcement-card-container {
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    /* SIze */
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+
+    /* Misc */
+    overflow-y:auto;
+}
